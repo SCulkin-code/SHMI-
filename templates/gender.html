@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+  
+{% block content %}
+  <h3>These are the gender categories used</h3>
+  
+  <title>Example 1 - apply dataTable()</title>
+     
+  </head>
+
+    <body>
+        <div class="container">
+
+<table cellpadding="0" cellspacing="0" border="0" class="dataTable" id="table">
+<thead><td>Category Number</td><td>Category Description</td><td>Value</td></thead>
+<tbody>
+
+<tr><td>1</td><td>Male </td><td> 1 </td></tr>
+<tr><td>2</td><td>Female </td><td> 2 </td></tr>
+<tr><td>3</td><td> Unkown</td><td> 0,9 </td></tr>
+
+</tbody>
+</table>
+         </div> 
+        </div>
+       <script> $(document).ready(function() {
+    $('#example').dataTable({"sPaginationType": "full_numbers"});
+});
+
+$(document).ready(function() {
+    $('#table').dataTable({"sPaginationType": "full_numbers"});
+});</script>
+    </body>
+    {% endblock %}

@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+  
+{% block content %}
+  <h2>About</h2>
+  <p>This is a app for NHS workers, to explore and explain the summary hospital-level mortality indicator (SHMI)  </p>
+  <p>The SHMI is the ratio between the actual number of patients who die following treatment at a trust and the number that would be expected to die on the basis of average England figures, given the characteristics of the patients treated there. </p>
+  <p> The actual number of patients who die includes those who die in hospital and those who die within 30 days of discharge. </p>
+  <p> The risk of the patient dying in hospital or within 30 days of discharge is estimated from 140 logistic regression models based on the following variables; the condition the patient is in hospital for (diagnosis), other underlying conditions the patient suffers from (measured using the Charlson comorbidity index), the age of the patient, the sex of the patient and the method of admission to hospital. The estimated risk for each patient takes a value between 0 and 1 and the expected number of deaths for each trust is calculated by summing the estimated risk values for all patients.</p>
+
+  
+  
+
+{% endblock %}

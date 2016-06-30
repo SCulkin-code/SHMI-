@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+  
+{% block content %}
+  <h3>The Charleston Comorbidity Index (CCI) calculates a number for a patient who may have a range of comorbid conditions. Each condition is assigned a score, depending on the risk of dying associated with each condition. Scores are summed to give a final number. </h3>
+  
+  <p> The Charleston Comorbidity Index for each provider spell is the sum of the scores for each of conditions in all secondary diagnosis fields</p>
+<p> When the second episode of the provider spell has been used to work out the primary diagnosis, the secondary diagnosis fields from the second episode are instead used to calculate the Charleston Comorbidity Index.  Otherwise, the secondary diagnosis field from the first episode of the provider spell are used </p>
+<p> There is an additional rule to remove the weight for cancer if both cancer and metastatic cancer are present </p>
+   
+    <title>Example 1 - apply dataTable()</title>
+     
+  </head>
+
+    <body>
+        <div class="container">
+
+<table cellpadding="0" cellspacing="0" border="0" class="dataTable" id="table">
+<thead><td>Category Number</td><td>Value</td></thead>
+<tbody>
+<tr><td>1</td><td>0</td></tr>
+<tr><td>2</td><td>1 - 5</td></tr>
+<tr><td>3</td><td> >5 </td></tr>
+</tbody>
+</table>
+         </div> 
+        </div>
+       <script> $(document).ready(function() {
+    $('#example').dataTable({"sPaginationType": "full_numbers"});
+});
+
+$(document).ready(function() {
+    $('#table').dataTable({"sPaginationType": "full_numbers"});
+});</script>
+    </body>
+
+{% endblock %}

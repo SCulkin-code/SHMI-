@@ -1,0 +1,172 @@
+{% extends "layout.html" %}
+  
+{% block content %}
+  <h2>Diagnoses are divided up into the following 140 groups</h2>
+
+
+   
+    <title>Example 1 - apply dataTable()</title>
+     
+  </head>
+
+    <body>
+        <div class="container">
+
+<table cellpadding="0" cellspacing="0" border="0" class="dataTable" id="table">
+<thead><td>SHMI Diagnosis Group</td><td>CSS Group(s)</td></thead>
+<tbody>
+
+
+<tr><td>1</td><td> 1 Tuberculosis</td></tr>
+<tr><td>2</td><td> 2, 249 Septicaemia (except in labour), Shock</td></tr>
+<tr><td>3</td><td> 3 Bacterial infection; unspecified site</td></tr>
+<tr><td>4</td><td> 4 Mycoses</td></tr>
+<tr><td>5</td><td> 5 HIV infection</td></tr>
+<tr><td>6</td><td> 6, 7, 8, 9,10Hepatitis, Viral infection, Other infections; including parasitic, Sexually transmitted infections (not HIV or hepatitis), Immunizations and screening for infectious disease</td></tr>
+<tr><td>7</td><td> 11 Cancer of head and neck</td></tr>
+<tr><td>8</td><td> 12 Cancer of oesophagus</td></tr>
+<tr><td>9</td><td> 13 Cancer of stomach</td></tr>
+<tr><td>10</td><td> 14 Cancer of colon</td></tr>
+<tr><td>11</td><td> 15 Cancer of rectum and anus</td></tr>
+<tr><td>12</td><td> 16 Cancer of liver and intrahepatic bile duct</td></tr>
+<tr><td>13</td><td> 17 Cancer of pancreas</td></tr>
+<tr><td>14</td><td> 18 Cancer of other GI organs; peritoneum</td></tr>
+<tr><td>15</td><td> 19 Cancer of bronchus; lung</td></tr>
+<tr><td>16</td><td> 20 Cancer; other respiratory and intrathoracic</td></tr>
+<tr><td>17</td><td> 22, 23 Melanomas of skin, Other non-epithelial cancer of skin</td></tr>
+<tr><td>18</td><td> 24 Cancer of breast</td></tr>
+<tr><td>19</td><td> 25 Cancer of uterus</td></tr>
+<tr><td>20</td><td> 26, 28 Cancer of cervix, Cancer of other female genital organs</td></tr>
+<tr><td>21</td><td> 27 Cancer of ovary</td></tr>
+<tr><td>22</td><td> 29, 30, 31 Cancer of prostate, Cancer of testis, Cancer of other male genital organs</td></tr>
+<tr><td>23</td><td> 32 Cancer of bladder</td></tr>
+<tr><td>24</td><td> 33, 34 Cancer of kidney and renal pelvis, Cancer of other urinary organs</td></tr>
+<tr><td>25</td><td> 35 Cancer of brain and nervous system</td></tr>
+<tr><td>26</td><td> 37, 38 Hodgkin's disease, Non-Hodgkin's lymphoma</td></tr>
+<tr><td>27</td><td> 39 Leukemias</td></tr>
+<tr><td>28</td><td> 40 Multiple myeloma</td></tr>
+<tr><td>29</td><td> 41, 45 Cancer; other and unspecified primary, Maintenance chemotherapy; radiotherapy</td></tr>
+<tr><td>30</td><td> 42 Secondary malignancies</td></tr>
+<tr><td>31</td><td> 21, 36, 43 Cancer of bone and connective tissue, Cancer of thyroid, Malignant neoplasm without specification of site</td></tr>
+<tr><td>32</td><td> 44, 167 Neoplasms of unspecified nature or uncertain behavior, Nonmalignant breast conditions</td></tr>
+<tr><td>33</td><td> 46, 47 Benign neoplasm of uterus, Other and unspecified benign neoplasm</td></tr>
+<tr><td>34</td><td> 49 Diabetes mellitus without complication</td></tr>
+<tr><td>35</td><td> 50 Diabetes mellitus with complications</td></tr>
+<tr><td>36</td><td> 48, 51 Thyroid disorders, Other endocrine disorders</td></tr>
+<tr><td>37</td><td> 55 Fluid and electrolyte disorders</td></tr>
+<tr><td>38</td><td> 52, 53, 58 Nutritional deficiencies, Disorders of lipid metabolism, Other nutritional;endocrine; and metabolic disorders</td></tr>
+<tr><td>39</td><td> 59, 60 Deficiency and other anemia, Acute posthemorrhagic anemia</td></tr>
+<tr><td>40</td><td> 63 Diseases of white blood cells</td></tr>
+<tr><td>41</td><td> 57, 61, 62, 64 Immunity disorders, Sickle cell anemia, Coagulation and hemorrhagic disorders, Other hematologic conditions</td></tr>
+<tr><td>42</td><td> 65, 68 Mental retardation, Senility and organic mental disorders</td></tr>
+<tr><td>43</td><td> 66, 67, 69,72 Alcohol-related mental disorders, Substance-related mental disorders, Affective disorders, Anxiety; somatoform; dissociative; and personality disorders</td></tr>
+<tr><td>44</td><td> 71 Other psychoses</td></tr>
+<tr><td>45</td><td> 70, 73, 74, 75 Schizophrenia and related disorders, Preadult disorders, Other mental conditions, Personal history of mental disorder</td></tr>
+<tr><td>46</td><td> 76, 77, 78 Meningitis (except that caused by tuberculosis or sexually transmitted disease), Encephalitis (except that caused by tuberculosis or sexually transmitted disease), Other CNS infection and poliomyelitis</td></tr>
+<tr><td>47</td><td> 79 Parkinson's disease</td></tr>
+<tr><td>48</td><td> 80, 81 Multiple sclerosis, Other hereditary and degenerative nervous system conditions</td></tr>
+<tr><td>49</td><td> 82, 113 Paralysis, Late effects of cerebrovascular disease</td></tr>
+<tr><td>50</td><td> 83 Epilepsy; convulsions</td></tr>
+<tr><td>51</td><td> 85 Coma; stupor; and brain damage</td></tr>
+<tr><td>52</td><td> 84, 86, 87, 88, 89, 90, 91, 92, 93, 94 Headache; including migraine, Cataract, Retinal detachments; defects; vascular occlusion; and retinopathy, Glaucoma, Blindness and vision defects, Inflammation; infection of eye (except that caused by tuberculosisor sexually transmitted disease), Other eye disorders, Otitis media and related conditions, Conditions associated with dizziness or vertigo, Other ear and sense organ disorders</td></tr>
+<tr><td>53</td><td> 95 Other nervous system disorders</td></tr>
+<tr><td>54</td><td> 96 Heart valve disorders</td></tr>
+<tr><td>55</td><td> 97 Peri-; endo-; and myocarditis; cardiomyopathy (except that caused by tuberculosis or sexually transmitted disease)</td></tr>
+<tr><td>56</td><td> 98, 99 Essential hypertension, Hypertension with complications and secondary hypertension</td></tr>
+<tr><td>57</td><td> 100 Acute myocardial infarction</td></tr>
+<tr><td>58</td><td> 101 Coronary atherosclerosis and other heart disease</td></tr>
+<tr><td>59</td><td> 102 Nonspecific chest pain</td></tr>
+<tr><td>60</td><td> 103 Pulmonary heart disease</td></tr>
+<tr><td>61</td><td> 104 Other and ill-defined heart disease</td></tr>
+<tr><td>62</td><td> 105 Conduction disorders</td></tr>
+<tr><td>63</td><td> 106 Cardiac dysrhythmias</td></tr>
+<tr><td>64</td><td> 107 Cardiac arrest and ventricular fibrillation</td></tr>
+<tr><td>65</td><td> 108 Congestive heart failure; nonhypertensive</td></tr>
+<tr><td>66</td><td> 109 Acute cerebrovascular disease</td></tr>
+<tr><td>67</td><td> 110, 111, 112 Occlusion or stenosis of precerebral arteries, Other and ill-definedcerebrovascular disease, Transient cerebral ischemia</td></tr>
+<tr><td>68</td><td> 114 Peripheral and visceral atherosclerosis</td></tr>
+<tr><td>69</td><td> 115 Aortic; peripheral; and visceral artery aneurysms</td></tr>
+<tr><td>70</td><td> 116 Aortic and peripheral arterial embolism or thrombosis</td></tr>
+<tr><td>71</td><td> 117 Other circulatory disease</td></tr>
+<tr><td>72</td><td> 118, 119,120, 121 Phlebitis; thrombophlebitis and thromboembolism, Varicose veins of lower extremity, Hemorrhoids, Other disease of veins and lymphatics</td></tr>
+<tr><td>73</td><td> 122 Pneumonia (except that caused by tuberculosis or sexually transmitted disease)</td></tr>
+<tr><td>74</td><td> 125 Acute bronchitis</td></tr>
+<tr><td>75</td><td> 127 Chronic obstructive pulmonary disease and bronchiectasis</td></tr>
+<tr><td>76</td><td> 128 Asthma</td></tr>
+<tr><td>77</td><td> 129 Aspiration pneumonitis; food/vomitus</td></tr>
+<tr><td>78</td><td> 130 Pleurisy; pneumothorax; pulmonary collapse</td></tr>
+<tr><td>79</td><td> 131 Respiratory failure; insufficiency; arrest (adult)</td></tr>
+<tr><td>80</td><td> 132 Lung disease due to external agents</td></tr>
+<tr><td>81</td><td> 56, 133 Cystic fibrosis, Other lower respiratory disease</td></tr>
+<tr><td>82</td><td> 123, 124, 126, 134, 136, 137 Influenza, Acute and chronic tonsillitis, Other upper respiratory infections,Other upper respiratory disease, Disorders of teeth and jaw, Diseases of mouth; excluding dental</td></tr>
+<tr><td>83</td><td> 135 Intestinal infection</td></tr>
+<tr><td>84</td><td> 138 Esophageal disorders</td></tr>
+<tr><td>85</td><td> 139 Gastroduodenal ulcer (except hemorrhage)</td></tr>
+<tr><td>86</td><td> 140, 141 Gastritis & duodenitis, Other disorders of stomach and duodenum</td></tr>
+<tr><td>87</td><td> 143 Abdominal hernia</td></tr>
+<tr><td>88</td><td> 144 Regional enteritis and ulcerative colitis</td></tr>
+<tr><td>89</td><td> 145 Intestinal obstruction without hernia</td></tr>
+<tr><td>90</td><td> 146, 147 Diverticulosis & diverticulitis, Anal and rectal conditions</td></tr>
+<tr><td>91</td><td> 142, 148 Appendicitis and other appendiceal conditions, Peritonitis and intestinal abscess</td></tr>
+<tr><td>92</td><td> 149 Biliary tract disease</td></tr>
+<tr><td>93</td><td> 150 Liver disease; alcohol-related</td></tr>
+<tr><td>94</td><td> 151 Other liver diseases</td></tr>
+<tr><td>95</td><td> 152 Pancreatic disorders (not diabetes)</td></tr>
+<tr><td>96</td><td> 153 Gastrointestinal hemorrhage</td></tr>
+<tr><td>97</td><td> 154 Noninfectious gastroenteritis</td></tr>
+<tr><td>98</td><td> 155 Other gastrointestinal disorders</td></tr>
+<tr><td>99</td><td> 157 Acute and unspecified renal failure</td></tr>
+<tr><td>100</td><td> 156, 158 Nephritis; nephrosis; renal sclerosis, Chronic renal failure</td></tr>
+<tr><td>101</td><td> 159 Urinary tract infections</td></tr>
+<tr><td>102</td><td> 160, 161,162 Calculus of urinary tract, Other diseases of kidneys and ureters, Other diseases of bladder and urethra</td></tr>
+<tr><td>103</td><td> 163 Genitourinary symptoms and ill-defined conditions</td></tr>
+<tr><td>104</td><td> 164, 165,166 Hyperplasia of prostate, Inflammatory conditions of male genital organs,Other male genital disorders</td></tr>
+<tr><td>105</td><td> 168, 169,170, 171,172, 173,175 Inflammatory diseases of female pelvic organs, Endometriosis, Prolapse of female genital organs, Menstrual disorders, Ovarian cyst, Menopausal disorders, Other female genital disorders</td></tr>
+<tr><td>106</td><td> 174, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186,187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 218Female infertility, Contraceptive & procreative management, Spontaneous abortion, Induced abortion, Prostabortion complications, Ectopic pregnancy, Other complications of pregnancy, Hemorrhage during pregnancy; abruption placenta; placenta previa, Hypertension complicating pregnancy; childbirth; or the puerperium, Early or threatened labor, Prolonged pregnancy, Diabetes or abnormal glucose tolerance complicating pregnancy; childbirth; or the puerperium, Malposition; malpresentation, Fetopelvic disproportion; obstruction, Previous C-section, Fetal distress and abnormal forces of labour, Polyhydramnios and other problems of amniotic cavity, Umbilical cord complication, OB-related trauma to perineum and vulva, Forceps delivery, Other complications ofbirth; puerperium affecting management of mother, Normal pregnancyand/or delivery, Livebirths</td></tr>
+<tr><td>107</td><td> 197 Skin and subcutaneous tissue infections</td></tr>
+<tr><td>108</td><td> 198, 199,200 Other inflammatory condition of skin, Chronic ulcer of skin, Other skin disorders</td></tr>
+<tr><td>109</td><td> 201 Infective arthritis and osteomyelitis (except that caused by tuberculosis or sexually transmitted disease)</td></tr>
+<tr><td>110</td><td> 204 Other non-traumatic joint disorders</td></tr>
+<tr><td>111</td><td> 205, 206 Spondylosis; intervertebral disc disorders; other back problems, Osteoporosis</td></tr>
+<tr><td>112</td><td> 207 Pathological fracture</td></tr>
+<tr><td>113</td><td> 211 Other connective tissue disease</td></tr>
+<tr><td>114</td><td> 54, 202, 203, 208, 209, 210, 212 Gout and other crystal arthropathies, Rheumatoid arthritis and related disease, Osteoarthritis, Acquired foot deformities, Other acquired deformities, Systemic lupus erythematosus and connective tissue disorders, Other bone disease and musculoskeletal deformities</td></tr>
+<tr><td>115</td><td> 213 Cardiac & circulatory congenital anomalies</td></tr>
+<tr><td>116</td><td> 214, 215, 216, 217 Digestive congenital anomalies, Genitourinary congenital anomalies, Nervous system congenital anomalies, Other congenital anomalies</td></tr>
+<tr><td>117</td><td> 219 Short gestation; low birth weight; and fetal growth retardation</td></tr>
+<tr><td>118</td><td> 220, 221, 222, 223 Intrauterine hypoxia and birth asphyxia, Respiratory distress syndrome, Hemolytic jaundice and perinatal jaundice, Birth trauma</td></tr>
+<tr><td>119</td><td> 224 Other perinatal conditions</td></tr>
+<tr><td>120</td><td> 226 Fracture of neck of femur (hip)</td></tr>
+<tr><td>121</td><td> 229 Fracture of upper limb</td></tr>
+<tr><td>122</td><td> 230 Fracture of lower limb</td></tr>
+<tr><td>123</td><td> 225, 227, 228, 231, 232 Joint disorders and dislocations; trauma-related, Spinal cord injury, Skull and face fractures, Other fractures, Sprains and strains</td></tr>
+<tr><td>124</td><td> 233 Intracranial injury</td></tr>
+<tr><td>125</td><td> 234 Crushing injury or internal injury</td></tr>
+<tr><td>126</td><td> 235 Open wounds of head; neck; and trunk</td></tr>
+<tr><td>127</td><td> 236 Open wounds of extremities</td></tr>
+<tr><td>128</td><td> 237 Complication of device; implant; or graft</td></tr>
+<tr><td>129</td><td> 238 Complication of surgical procedures or medical care</td></tr>
+<tr><td>130</td><td> 239 Superficial injury; contusion</td></tr>
+<tr><td>131</td><td> 240 Burns</td></tr>
+<tr><td>132</td><td> 241, 242, 243 Poisoning by psychotropic agents, Poisoning by other medications and drugs, Poisoning by nonmedicinal substances</td></tr>
+<tr><td>133</td><td> 244 Other injuries & conditions due to external causes</td></tr>
+<tr><td>134</td><td> 245 Syncope</td></tr>
+<tr><td>135</td><td> 246 Fever of unknown origin</td></tr>
+<tr><td>136</td><td> 247, 248 Lymphadenitis, Gangrene</td></tr>
+<tr><td>137</td><td> 250 Nausea and vomiting</td></tr>
+<tr><td>138</td><td> 251 Abdominal pain</td></tr>
+<tr><td>139</td><td> 252 Malaise and fatigue</td></tr>
+<tr><td>140</td><td> 253, 254, 255, 256, 257, 258, 259, 260 Allergic reactions, Rehabilitation care; fitting of prostheses; and adjustment of devices, Administrative/social admission, Medical examination/evaluation, Other aftercare, Other screening for suspected conditions (not mental disorders or infectious disease), Residual codes; unclassified, E Codes: All (external causes of injury and poisoning)</td></tr>
+</tbody>
+</table>
+         </div> 
+        </div>
+       <script> $(document).ready(function() {
+    $('#example').dataTable({"sPaginationType": "full_numbers"});
+});
+
+$(document).ready(function() {
+    $('#table').dataTable({"sPaginationType": "full_numbers"});
+});</script>
+    </body>
+    {% endblock %}

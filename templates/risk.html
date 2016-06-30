@@ -1,56 +1,18 @@
 {% extends "layout.html" %}
+  
 {% block content %}
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <h2>risk of a death</h2>
+  <p>calculated for each of <a href=" {{ url_for('diagnosisgrouptable') }}">140 diagnosis groups</a>;a <a href="http://vassarstats.net/logreg1.html"  target="_new"> logistic regression model </a>is built for each diagnosis group, using a case mix based on 4 characteristics of a patient:</p>
+  <h3><a href=" {{ url_for('age') }}">1. Age group</a></h3>
+  <h3><a href=" {{ url_for('comorbidity') }}">2. Charleston comorbidity index group</a></h3>
+  <h3><a href=" {{ url_for('admission') }}">3. Admission method</a></h3>
+  <h3><a href=" {{ url_for('gender') }}">4. Gender<a/></h3>
 
 <body>
 
-  
-    <h2>This app explains and explores the SHMI</h2>
-    <h4> (the summary hospital-level mortality indicator)</h4>
-    <p> The basic formula is:</p>
-  <h2>\begin{equation} SHMI = \frac{observed\ deaths}{expected\ deaths}\end{equation}</h2>
-  <h3>If your organisation's SHMI is less than 1, less people are dying than expected</h3>
-  <h3>If your organisation's SHMI is more than 1, more people are dying than expected </h3>
-  <h3>It is published by the HSCIC, more details can be found <a href="http://www.hscic.gov.uk/SHMI" target="_new"> here</a> </h3>
-  <h4>The SHMI explained simply:</h4>
-  <p> The SHMI is the ratio between the actual number of patients who die following treatment at a trust and the number that would be expected to die on the basis of average England figures, given the characteristics of the patients treated there.</p>
-  <p> The actual number of patients who die includes those who die in hospital and those who die within 30 days of discharge.</P>
-   The risk of the patient dying in hospital or within 30 days of discharge is estimated from 140 logistic regression models based on the following variables:</p>
-   <p>- the condition the patient is in hospital for (the diagnosis)</p>
-   <p>- other underlying conditions the patient suffers from (measured using the Charlson comorbidity index)</p>
-   <p>- the age of the patient</p>
-   <p>- the sex of the patient</p>
-   <p>-the method of admission to hospital</p>
-   <p> The estimated risk for each patient takes a value between 0 and 1</p>
-   <p>The expected number of deaths for each trust is calculated by summing the estimated risk values for all patients.</p>
- 
-  
-   <h4> How this looks mathematically:</h4>
-  <h2>observed =  \(\sum_{d} \sum_{j} numerator_{dj}\) </h2>
-  <h3>this means the sum of all actually observed to die at the provider, for all the diagnosis groups (d) and all the different case-mixes (j).  It includes those who died within 30 days after leaving hospital (taken from ONS deaths data)</h3>  
-  <p> and:</p>
-  <h2>expected =  \(\sum_{d} \sum_{j} (risk_{dj} \times denominator_{dj})\) </h2>
-  <h3>this means everyone treated by the provider (in each of the diagnosis groups (d) and case-mixes (j)) multiplied by the risk that they might die</h3>  
-  <h2>How is the risk calculated? Well this is where it gets more complicated</h2> 
-      <h3>The risk of an event is calculated for every case-mix combination (j) in all diagnosis groups (d) defined as:</h3>
-<h2>\begin{equation} Risk_{d,j} = \frac{e^{logodds_{d,j}}}{1 + {e^{logodds_{d,j}}}}\end{equation}</h2>
-<h3> this means that Risk (e.g. probability of death) is a function of something called logodds</h3>
-<h3>where:</h3>
-<h2>\begin{equation} logodds_{d,j} = \alpha_{d}+\sum_{i=1}^{j}\beta_{di}x_i\end{equation}</h2>
-<h3>this is showing that logodds is calculated using the equation for the s shaped curve produced by logistic regression. Here &alpha; is the intercept and &beta; represents the coefficients for the the case mix variable (x), for each diagnosis grouping.  An individual logistic regression is used for EACH of the <a href=" {{ url_for('diagnosisgrouptable') }}">140 diagnosis groups</a>, to calculate the risk.  In the logistic regression every combination of all the different case mix characteristics is accounted for.</h3> 
 
-   <h4>risk of a death explained more simply:</h4>
-
-
-<p>e.g how case mix is accounted for</p>
-<h3> From a general pot, patient are divided into disease groups(d).  Within those disease groups they are further split by different characteristics(j).  Here gender is shown:</h3>
-
-
-<FORM>
-<INPUT TYPE="button" onClick="history.go(0)" VALUE="Run Animation">
-
-</FORM>
-<svg width="900" height="550">
+<p>How case mix is accounted for:</p>
+<svg width="900" height="800">
 
 #definitions
 <def>
@@ -115,7 +77,9 @@ to="hidden" begin="3s" fill="freeze"/>
 <use id="disease1-male" x = "470" y = "420" xlink:href = "#jar"/>
  <text x="470" y="540" class="jar-caption">Female</text> 
 
-
+ <use id="jar-of-death" x = "250" y = "620" xlink:href = "#jar"/>
+#random grim greaper code?
+ <use xlink:href="https://upload.wikimedia.org/wikipedia/commons/f/fd/The_death.svg#svg2" x="50" y="50"></use>
 #Ball 1
 #box2
 #box F
@@ -163,7 +127,7 @@ to="hidden" begin="3s" fill="freeze"/>
 #box M
  <use id = "ball7" x = "420" y = "80" xlink:href = "#dead-ball">
  <animateMotion begin = "1s" path="m 0 0 l -230 170" dur="0.5s" fill="freeze" />
- <animateMotion begin = "4s" path="m -230 170 l -100 250" dur="0.5s" fill="freeze"/>
+ <animateMotion begin = "4s" path="m -230 170 l -100 250" dur="0.5s" fill="freeze" />
  </use> 
 #Ball 8
 #box 1
@@ -201,23 +165,20 @@ to="hidden" begin="3s" fill="freeze"/>
  <animateMotion begin = "6s" path="m 250 170 l -40 200" dur="0.5s" fill="freeze" />
  </use>
 
- <h3> Depending on the pot, different numbers die.  This is computed using <a href = "{{ url_for('observed') }}">logistic regression</a> to give a probability of death for that pot aka the RISK </h3>
-<p>So, calculated for each of <a href=" {{ url_for('diagnosisgrouptable') }}">140 diagnosis groups</a>,a  <a href = "{{ url_for('observed') }}">  logistic regression model </a>is built for each diagnosis group, using a case mix based on 4 characteristics of a patient:</p>
-  <h3><a href=" {{ url_for('age') }}">1. Age group</a></h3>
-  <h3><a href=" {{ url_for('comorbidity') }}">2. Charleston comorbidity index group</a></h3>
-  <h3><a href=" {{ url_for('admission') }}">3. Admission method</a></h3>
-  <h3><a href=" {{ url_for('gender') }}">4. Gender</a></h3>
-
-
-
- <p> if you would like to see some data <a href = "{{ url_for('data') }}"> click here</a>, or use the data tab at the top of the page </p>
- 
  
 
+ 
+
+ 
+ 
+ 
+ 
+ <g transform="translate(50 40)">
       
  </g>
 </svg> 
 </body>
-    
-  </div>
+
+
+<script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 1024px; height: 1072px;'><noscript><a href='https:&#47;&#47;indicators.hscic.gov.uk&#47;nesstar&#47;docs&#47;plot.HTML'><img alt='Summary Hospital-level Mortality Indicator (SHMI) - Deaths associated with hospitalisation, England, October 2014 - September 2015 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;43&#47;43XDKWQWG&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='1024' height='1072' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='path' value='shared&#47;43XDKWQWG' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;43&#47;43XDKWQWG&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='tabs' value='yes' /></object></div>
 {% endblock %}

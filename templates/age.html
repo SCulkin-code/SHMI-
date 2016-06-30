@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+  
+{% block content %}
+  <h3>The age of a patient is one of the characteristics that is taken into account when calculating the SHMI.  This characteristic is divided up into 'pots' using the following age ranges:</h3>
+
+
+   
+    <title>Example 1 - apply dataTable()</title>
+     
+  </head>
+
+    <body>
+        <div class="container">
+
+<table cellpadding="0" cellspacing="0" border="0" class="dataTable" id="table">
+<thead><td>Category Number</td><td>Value</td></thead>
+<tbody>
+<tr><td>1</td><td>7000-7012</td></tr>
+<tr><td>2</td><td>1 - 4</td></tr>
+<tr><td>3</td><td>5 - 9</td></tr>
+<tr><td>4</td><td>10 - 14</td></tr>
+<tr><td>5</td><td>15 - 19</td></tr>
+<tr><td>6</td><td>20 - 24</td></tr>
+<tr><td>7</td><td>25 - 29</td></tr>
+<tr><td>8</td><td>30 - 34</td></tr>
+<tr><td>9</td><td>35 - 39</td></tr>
+<tr><td>10</td><td>40 - 44</td></tr>
+<tr><td>11</td><td>45 - 49</td></tr>
+<tr><td>12</td><td>50 - 54</td></tr>
+<tr><td>13</td><td>55 - 59</td></tr>
+<tr><td>14</td><td>60 - 64</td></tr>
+<tr><td>15</td><td>65 - 69</td></tr>
+<tr><td>16</td><td>70 - 74</td></tr>
+<tr><td>17</td><td>75 - 79</td></tr>
+<tr><td>18</td><td>80 - 84</td></tr>
+<tr><td>19</td><td>85 - 89</td></tr>
+<tr><td>20</td><td>90 - 120</td></tr>
+<tr><td>21</td><td>missing</td></tr>
+</tbody>
+</table>
+         </div> 
+        </div>
+       <script> $(document).ready(function() {
+    $('#example').dataTable({"sPaginationType": "full_numbers"});
+});
+
+$(document).ready(function() {
+    $('#table').dataTable({"sPaginationType": "full_numbers"});
+});</script>
+    </body>
+    {% endblock %}

@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+  
+{% block content %}
+  <h3>The admission method tells you how the the patient arrived into the hospital</h3>
+  <p> Note: The release of version he release of version 6.2 of the Commissioning Data Sets (CDS) introduced an updated set of admission method codes to be used from 1st April 2013 onwards. Admission method code 25 was introduced as part of this update and admission method code 28 was replaced with codes 2A, 2B, 2C, 2D. Historic data with admission method code 28 will continue to be categorised as ‘Acute’ admissions.</p>
+
+  <title>Example 1 - apply dataTable()</title>
+     
+  </head>
+
+    <body>
+        <div class="container">
+
+<table cellpadding="0" cellspacing="0" border="0" class="dataTable" id="table">
+<thead><td>Category Number</td><td>Category Description</td><td>Value</td></thead>
+<tbody>
+
+<tr><td>1</td><td>Elective </td><td> 11,12,13</td></tr>
+<tr><td>2</td><td>Unknown </td><td> 99</td></tr>
+<tr><td>3</td><td> Acute</td><td> 21, 22, 23, 24, 25, 2A, 2B, 2C, 2D, 28, 31, 32, 81, 82, 83, 84, 89, 98 </td></tr>
+
+</tbody>
+</table>
+         </div> 
+        </div>
+       <script> $(document).ready(function() {
+    $('#example').dataTable({"sPaginationType": "full_numbers"});
+});
+
+$(document).ready(function() {
+    $('#table').dataTable({"sPaginationType": "full_numbers"});
+});</script>
+
+{% endblock %}
