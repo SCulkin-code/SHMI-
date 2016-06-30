@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #444;
+}
+ 
+/*
+ * Create dark grey header with a white logo
+ */
+  
+header {
+  background-color: #2B2B2B;
+  height: 35px;
+  width: 100%;
+  opacity: .9;
+  margin-bottom: 10px;
+}
+ 
+header h1.logo {
+  margin: 0;
+  font-size: 3em;
+  color: #fff;
+  text-transform: uppercase;
+  float: left;
+}
+ 
+header h1.logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+ 
+/*
+ * Center the body content
+ */
+  
+.container {
+  width: 1040px;
+  margin: 0 auto;
+}
+ 
+div.jumbo {
+  padding: 10px 0 30px 0;
+  background-color: #eeeeee;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+}
+ 
+h2 {
+  font-size: 3em;
+  margin-top: 40px;
+  text-align: left;
+  letter-spacing: -2px;
+}
+
+.standardText {
+  font-size: 1.7em;
+  font-weight: 200;
+  margin-top: 30px;
+  text-align: left;
+  letter-spacing: -1px;
+  color: #999;
+}
+ 
+h3 {
+  font-size: 1.7em;
+  font-weight: 200;
+  margin-top: 30px;
+  text-align: left;
+  letter-spacing: -1px;
+  color: #2e004d;
+}
+h4 {
+  font-size: 3em;
+  font-weight: 100;
+  margin-top: 30px;
+  text-align: left;
+  letter-spacing: -1px;
+  color: #998;
+}
+/*
+ * Display navigation links inline
+ */
+ 
+.menu {
+  float: right;
+  margin-top: 8px;
+}
+ 
+.menu li {
+  display: inline;
+}
+ 
+.menu li + li {
+  margin-left: 35px;
+}
+ 
+.menu li a {
+  color: #999;
+  text-decoration: none;
+}
+a {
+    color: steelblue;
+    text-decoration: none;
+}
+input[type=button] {
+    background-color: lightgray;
+    border: none;
+    color: black;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+    padding: 10px;
+}
