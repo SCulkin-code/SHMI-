@@ -11,9 +11,9 @@ def home():
 def about():
   return render_template('about.html')
   
-@app.route('/Data')
-def Data():
-  return render_template('Data.html')
+@app.route('/data')
+def data():
+  return render_template('data.html')
   
 @app.route('/SHMI')
 def SHMI():
